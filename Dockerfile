@@ -1,7 +1,6 @@
 FROM nginx:alpine
 
-# Copiar los archivos compilados de la aplicación de React al directorio de Nginx
-COPY --from=build /. /usr/share/nginx/html
+COPY /. /usr/share/nginx/html
 
 # Copiar la configuración personalizada de Nginx
 COPY nginx.conf /etc/nginx/conf.d/default.conf
